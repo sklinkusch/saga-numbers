@@ -5,7 +5,10 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">HERE COMES THE CONTENT</header>
+        <header className="App-header">
+          <div className="pi">&pi;</div>
+          HERE COMES THE CONTENT
+        </header>
       </div>
     );
   }
