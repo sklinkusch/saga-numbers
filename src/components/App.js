@@ -6,7 +6,8 @@ class App extends React.Component {
     return (
       <div className="App">
         <header className="App-header">
-          <div className="pi">&pi;</div>
+          <div className="header pi">&pi;</div>
+          <div className="subheader">Numbers</div>
           HERE COMES THE CONTENT
         </header>
       </div>
