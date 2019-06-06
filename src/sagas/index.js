@@ -1,5 +1,5 @@
 // import saga
-import { takeLatest, put, call } from "redux-saga";
+import { takeLatest, put, call } from "redux-saga/effects";
 import axios from "axios";
 import {
   API_CALL_REQUEST,
