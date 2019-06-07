@@ -39,19 +39,23 @@ class App extends React.Component {
               <i className="fas fa-quote-right" />
             </aside>
             <div className="input-form">
-              <input type="number" min="0" ref={this.inputField} />
-              {fetching ? (
-                <button className="btn btn-warning" disabled>
-                  Fetching...
-                </button>
-              ) : (
-                <button
-                  className="btn btn-primary"
-                  onClick={() => getData(this.inputField.current.value)}
-                >
-                  Show info about this number
-                </button>
-              )}
+              <div>
+                <input type="number" min="0" ref={this.inputField} />
+              </div>
+              <div>
+                {fetching ? (
+                  <button className="btn btn-warning" disabled>
+                    Fetching...
+                  </button>
+                ) : (
+                  <button
+                    className="btn btn-primary"
+                    onClick={() => getData(this.inputField.current.value)}
+                  >
+                    Show info about this number
+                  </button>
+                )}
+              </div>
             </div>
           </div>
         </header>
