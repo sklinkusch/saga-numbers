@@ -16,9 +16,11 @@ class App extends React.Component {
           <div className="header pi">&pi;</div>
           <div className="subheader">Numbers</div>
           <div className="flex-container flex-row">
-            <aside className="left quotation quotation-left sm-1 lg-1">
-              <i className="fas fa-quote-left" />
-            </aside>
+            {message && (
+              <aside className="left quotation quotation-left sm-1 lg-1 as-begin">
+                <i className="fas fa-quote-left" />
+              </aside>
+            )}
             {message && <main className="message sm-10 lg-10">{message}</main>}
             {fetching && (
               <main className="fetching sm-10 lg-10 alert-warning">
@@ -31,31 +33,33 @@ class App extends React.Component {
               </main>
             )}
             {!message && !error && !fetching && (
-              <main className="alert-primary sm-10 lg-10">
+              <main className="alert-secondary sm-10 lg-10">
                 Enter a number to get a quote
               </main>
             )}
-            <aside className="right quotation quotation-right sm-1 lg-1">
-              <i className="fas fa-quote-right" />
-            </aside>
-            <div className="input-form">
-              <div>
-                <input type="number" min="0" ref={this.inputField} />
-              </div>
-              <div>
-                {fetching ? (
-                  <button className="btn btn-warning" disabled>
-                    Fetching...
-                  </button>
-                ) : (
-                  <button
-                    className="btn btn-primary"
-                    onClick={() => getData(this.inputField.current.value)}
-                  >
-                    Show info about this number
-                  </button>
-                )}
-              </div>
+            {message && (
+              <aside className="right quotation quotation-right sm-1 lg-1 as-end">
+                <i className="fas fa-quote-right" />
+              </aside>
+            )}
+          </div>
+          <div className="input-form">
+            <div>
+              <input type="number" min="0" ref={this.inputField} />
+            </div>
+            <div>
+              {fetching ? (
+                <button className="btn btn-warning" disabled>
+                  Fetching...
+                </button>
+              ) : (
+                <button
+                  className="btn btn-primary"
+                  onClick={() => getData(this.inputField.current.value)}
+                >
+                  Show info about this number
+                </button>
+              )}
             </div>
           </div>
         </header>
