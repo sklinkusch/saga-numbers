@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/saga-numbers/static/css/main.310950ef.chunk.css",
+    "main.js": "/saga-numbers/static/js/main.2b67ec88.chunk.js",
+    "main.js.map": "/saga-numbers/static/js/main.2b67ec88.chunk.js.map",
+    "runtime~main.js": "/saga-numbers/static/js/runtime~main.22b5068e.js",
+    "runtime~main.js.map": "/saga-numbers/static/js/runtime~main.22b5068e.js.map",
+    "static/css/2.81d30a77.chunk.css": "/saga-numbers/static/css/2.81d30a77.chunk.css",
+    "static/js/2.62b54b3c.chunk.js": "/saga-numbers/static/js/2.62b54b3c.chunk.js",
+    "static/js/2.62b54b3c.chunk.js.map": "/saga-numbers/static/js/2.62b54b3c.chunk.js.map",
+    "index.html": "/saga-numbers/index.html",
+    "precache-manifest.a300a421536a720c68392e48749df5eb.js": "/saga-numbers/precache-manifest.a300a421536a720c68392e48749df5eb.js",
+    "service-worker.js": "/saga-numbers/service-worker.js",
+    "static/css/2.81d30a77.chunk.css.map": "/saga-numbers/static/css/2.81d30a77.chunk.css.map",
+    "static/css/main.310950ef.chunk.css.map": "/saga-numbers/static/css/main.310950ef.chunk.css.map",
+    "static/media/all.min.css": "/saga-numbers/static/media/fa-solid-900.ef3df984.eot",
+    "static/media/App.scss": "/saga-numbers/static/media/lobster-v21-latin-regular.fe012fb7.woff2"
+  }
+}
