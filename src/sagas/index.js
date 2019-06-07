@@ -25,6 +25,9 @@ function* workerSaga(action) {
     }
     const response = yield call(() => fetchNumber(number));
     const message = response.data;
+    if (message.includes("Bad Gateway")) {
+      throw new Error("Bad response from the server. Try again.");
+    }
     yield put({ type: API_CALL_SUCCESS, message });
   } catch (error) {
     yield put({ type: API_CALL_FAILURE, error });
