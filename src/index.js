@@ -8,6 +8,8 @@ import { store } from "./store";
 // import App
 import App from "./components/App";
 // import styles
+import "@fortawesome/fontawesome-free/css/all.min.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles/index.scss";
 // import serviceWorker
 import * as serviceWorker from "./serviceWorker";
