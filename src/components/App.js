@@ -27,7 +27,7 @@ class App extends React.Component {
             )}
             {error && (
               <main className="error sm-10 lg-10 alert-danger">
-                An error occured.
+                {error.message}
               </main>
             )}
             {!message && !error && !fetching && (
