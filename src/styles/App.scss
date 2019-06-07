@@ -95,13 +95,49 @@ input {
   font-family: "Lobster", cursive;
 }
 
+.header {
+  position: relative;
+}
+.subheader {
+  font-size: 2.5rem;
+}
+
 .message {
   text-align: justify;
   font-family: "Great Vibes", cursive;
   font-size: 2rem;
 }
 
+.number {
+  height: 100%;
+  border-radius: 50%;
+  padding: 5px;
+  background-color: blue;
+  color: white;
+}
 #no-a {
-  position: relative;
+  position: absolute;
   left: 35px;
+  bottom: 40px;
+  transform: rotate(20deg);
+}
+
+#no-b {
+  position: absolute;
+  right: 55px;
+  bottom: 20px;
+  transform: rotate(-65deg);
+}
+
+#no-c {
+  position: absolute;
+  right: 89px;
+  top: 20px;
+  transform: rotate(35deg);
+}
+
+#no-d {
+  position: relative;
+  left: 20px;
+  transform: rotate(-42deg);
 }
