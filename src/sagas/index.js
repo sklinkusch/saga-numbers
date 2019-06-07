@@ -14,8 +14,17 @@ export function* watcherSaga() {
 function* workerSaga(action) {
   try {
     const number = action.number;
+    if (!/^[0-9]+$/.test(number)) {
+      throw new Error("You have to provide a number!");
+    }
+    if (!Number.isInteger(Number(number))) {
+      throw new Error("The number must be a whole number.");
+    }
+    if (Number(number) < 0) {
+      throw new Error("The number must be positive.");
+    }
     const response = yield call(() => fetchNumber(number));
-    const message = response;
+    const message = response.data;
     yield put({ type: API_CALL_SUCCESS, message });
   } catch (error) {
     yield put({ type: API_CALL_FAILURE, error });
@@ -23,8 +32,7 @@ function* workerSaga(action) {
 }
 
 const fetchNumber = number => {
-  return axios({
-    method: "get",
-    url: `https://numbers-api-proxy-dci-fbw121.now.sh/?number=${number}`
-  });
+  return axios.get(
+    `https://numbers-api-proxy.dci-fbw121.now.sh/?number=${number}`
+  );
 };
