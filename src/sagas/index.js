@@ -14,7 +14,7 @@ export function* watcherSaga() {
 function* workerSaga(action) {
   try {
     const number = action.number;
-    if (!/^[0-9]+$/.test(number)) {
+    if (!/^[+-]?[0-9]+[.]?[0-9]*$/.test(number)) {
       throw new Error("You have to provide a number!");
     }
     if (!Number.isInteger(Number(number))) {
